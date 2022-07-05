@@ -10,6 +10,6 @@ rules:
     # Create can not be restricted to a resource name.
     verbs: ["create"]
   - apiGroups: [""]
-    resourceNames: [ {{ .Values.tailscale.state.secretName }} ]
+    resourceNames: [ {{ .Values.tailscale.state.secretName }}, {{ .Values.tailscale.auth.secretName }} ]
     resources: ["secrets"]
     verbs: ["get", "update"]
