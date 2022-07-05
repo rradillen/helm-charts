@@ -8,7 +8,7 @@ rules:
   - apiGroups: [""] # "" indicates the core API group
     resources: ["secrets"]
     # Create can not be restricted to a resource name.
-    verbs: ["create", "get", "list"]
+    verbs: ["create", "get", "list", "update" ]
   - apiGroups: [""]
     resourceNames: [ {{ .Values.tailscale.state.secretName }}, {{ .Values.tailscale.auth.secretName }} ]
     resources: ["secrets"]
